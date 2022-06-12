@@ -9,14 +9,13 @@ var maximumUniqueSubarray = function(nums) {
     for (let i = 0; i < nums.length; i++) {
         if (!arr.includes(nums[i])) {
             arr.push(nums[i]);
-            max = Math.max(arr.reduce((a,c)=>a+c),max)
         } else {
             max = Math.max(arr.reduce((a,c)=>a+c),max)
             arr = arr.slice(arr.indexOf(nums[i])+1,i)
             arr.push(nums[i]);
         }
-        
     }
+    max = Math.max(arr.reduce((a,c)=>a+c),max);
     return max;
 
 };
