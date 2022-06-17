@@ -15,5 +15,4 @@ var deleteNode = function(node) {
         if (node.next.next===null) node.next = null
         else node = node.next;
     }
-    console.log(node.next)
 };
