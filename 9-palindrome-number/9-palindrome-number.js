@@ -7,15 +7,14 @@ var isPalindrome = function(x) {
     x = String(x);
     let left = 0;
     let right = x.length-1;
-    let answer = true;
     for (let i = 0; i<=Math.floor((x.length-1)/2); i++) {
         if (x[left]===x[right]) {
             left++;
             right--;
         } else {
-            answer = false;
+            return false;
         }
     }
-    return answer;
+    return true
     
 };
